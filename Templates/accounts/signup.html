@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Register
+    </title>
+</head>
+<body>
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <div>
+                <label for="username">Username</label>
+                <div>
+                    {{ form.username }}
+                </div>
+                {{ form.username.error }}
+            </div>
+            <div>
+                <label for="email">Your Email</label>
+                <div>
+                    {{ form.email }}
+                </div>
+                {{ form.email.error }}
+            </div>
+            <div>
+                <label for="password">Your Password</label>
+                <div>
+                    {{ form.password1 }}
+                </div>
+                {{ form.password1.error }}
+            </div>
+            <div>
+                <label for="password">Password Confirmation</label>
+                <div>
+                    {{ form.password2 }}
+                </div>
+                {{ form.password2.error }}
+            </div>
+            <div>
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
