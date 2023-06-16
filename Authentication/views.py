@@ -21,7 +21,7 @@ def signin(request):
     else:
         form = LoginForm()
 
-    return render(request, 'accounts/login.html', {"form": form, "msg": msg})
+    return render(request, 'accounts/signin.html', {"form": form, "msg": msg})
 
 # signin
 def signup(request):

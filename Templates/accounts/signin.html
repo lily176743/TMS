@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block user_css %}
-<link rel="stylesheet" href="{% static 'signup.css' %}">
+<link rel="stylesheet" href="{% static 'signin.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -22,22 +22,19 @@
                     {{ form.username }}
                 </div>
                 <div class="mb-3">
-                    <label for="email" class="form-label text-light">Your Email</label>
-                    {{ form.email }}
-                    {{ form.email.error }}
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label text-light">Your Password</label>
-                    {{ form.password1 }}
-                </div>
-                <div class="mb-3">
-                    <label for="password" class="form-label text-light">Password Confirmation</label>
-                    {{ form.password2 }}
+                    <label for="password" class="form-label text-light">Password</label>
+                    {{ form.password }}
                 </div>
                 <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary">Sign up</button>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
                 </div>
             </form>
+        </div>
+    </div>
+    <div class="row justify-content-center mt-3">
+        <div class="col-md-3 bg-dark bg-opacity-25 rounded p-3 text-center text-light border border-dark">
+            New to Team?
+            <a class="text-decoration-none" href="{% url 'signup' %}">Creat an account</a>.
         </div>
     </div>
 </div>

@@ -1,16 +1,41 @@
-<!DOCTYPE html>
-<html>
+{% extends 'includes/base.html' %}
+{% load static %}
 
-<head>
-    <title>
-        Home
-    </title>
-</head>
-<body>
-    <a href="{% url 'signout' %}">Sign out</a>
-    <div>
-        <h1>Welcome to our team.</h1>
-        <h3>Our teamspirit is lucky.</h3>
+{% block user_css %}
+<link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="javascript:void(0)">
+      <img src="{% static 'logo.png' %}" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+  </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)">Link</a>
+        </li>
+      </ul>
+      <a class="text-decoration-none text-light" href="{% url 'signout' %}">
+        <i class="capslock"></i>
+        Sign out
+      </a>
     </div>
-</body>
-</html>
+  </div>
+</nav>
+
+<div>
+  <h1>Welcome to our team.</h1>
+  <h3>Our teamspirit is lucky.</h3>
+</div>
+{% endblock  %}
